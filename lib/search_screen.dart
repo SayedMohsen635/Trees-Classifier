@@ -3,6 +3,8 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 
+import 'cach_helper.dart';
+
 class SearchInFirebasePage extends StatefulWidget {
   const SearchInFirebasePage({super.key});
 
@@ -14,6 +16,7 @@ class _SearchInFirebasePageState extends State<SearchInFirebasePage> {
   String lable = '';
   @override
   void initState() {
+    lable = CachHelper.getData(key: 'output');
     super.initState();
   }
 
@@ -29,7 +32,7 @@ class _SearchInFirebasePageState extends State<SearchInFirebasePage> {
           return const CircularProgressIndicator();
         } else {
           var d = snapshot.data!.docs
-              .where((element) => element['Name'] == 'Aloe vera')
+              .where((element) => element['Name'] == lable)
               .toList();
 
           return d.isEmpty

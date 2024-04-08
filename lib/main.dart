@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:trees_project/cach_helper.dart';
 import 'package:trees_project/firebase_options.dart';
 import 'package:trees_project/home_screen.dart';
 import 'package:trees_project/info_screen.dart';
@@ -8,14 +9,10 @@ import 'package:trees_project/search_screen.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  // await Firebase.initializeApp(
-  //     options: const FirebaseOptions(
-  //         apiKey: "AIzaSyBMCx9L1mKIBGgkA2HYqRjAtNqwwDX6Jvw",
-  //         appId: "1:186587038018:web:49e00e59f66664de3048db",
-  //         messagingSenderId: "186587038018",
-  //         projectId: "trees-app-841af"));
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
+    CachHelper.init();
   runApp(const TreeIdentificationApp());
+
 }
 
 class TreeIdentificationApp extends StatefulWidget {

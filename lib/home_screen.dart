@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:tflite_v2/tflite_v2.dart';
 
+import 'cach_helper.dart';
+
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
 
@@ -34,6 +36,8 @@ class _HomePageState extends State<HomePage> {
     );
     setState(() {
       _outputs = output!;
+      CachHelper.saveData(
+          key: 'output', value: _outputs![0]["label"].toString().substring(2));
     });
   }
 
