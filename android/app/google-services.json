@@ -1,13 +1,32 @@
 {
   "project_info": {
-    "project_number": "186587038018",
-    "project_id": "trees-app-841af",
-    "storage_bucket": "trees-app-841af.appspot.com"
+    "project_number": "166751578555",
+    "project_id": "trees-bf876",
+    "storage_bucket": "trees-bf876.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:186587038018:android:20966dd1786872273048db",
+        "mobilesdk_app_id": "1:166751578555:android:95c6220364c40fd39dbc9e",
+        "android_client_info": {
+          "package_name": "com.allawy.trees"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCOkHYVuQm63wABUq0F0cR_oP0p_caJ3Gw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:166751578555:android:cc96b9ec1de3c5ae9dbc9e",
         "android_client_info": {
           "package_name": "com.example.trees_project"
         }
@@ -15,7 +34,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyADGmyQiNL73raUj4ImgTVdTaBDgH09szU"
+          "current_key": "AIzaSyCOkHYVuQm63wABUq0F0cR_oP0p_caJ3Gw"
         }
       ],
       "services": {

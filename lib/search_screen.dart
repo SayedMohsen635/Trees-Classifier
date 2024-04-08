@@ -11,43 +11,52 @@ class SearchInFirebasePage extends StatefulWidget {
 }
 
 class _SearchInFirebasePageState extends State<SearchInFirebasePage> {
-  String searchResult = '';
-  bool isLoading = false;
-
-  Future<void> searchTree() async {
-    setState(() {
-      isLoading = true;
-    });
-
-    // Get the label/classification result from your model
-    String label = '_outputs![0]["label"].toString().substring(2)';
-    print(label);
-
-    // Perform the search in Firestore
-    QuerySnapshot querySnapshot =
-        await FirebaseFirestore.instance.collection('Trees').get();
-
-    setState(() {
-      isLoading = false;
-    });
-
-    if (querySnapshot.docs.isNotEmpty) {
-      // Display the attributes of the matching tree
-      setState(() {
-        searchResult = querySnapshot.docs.first.data().toString();
-      });
-    } else {
-      // Tree not found
-      setState(() {
-        searchResult = 'Tree not found.';
-      });
-    }
+  String lable = '';
+  @override
+  void initState() {
+    super.initState();
   }
 
   @override
   Widget build(BuildContext context) {
     return Center(
-      child: isLoading ? const CircularProgressIndicator() : const Text("data"),
-    );
+        child: StreamBuilder(
+      stream: FirebaseFirestore.instance.collection('trees').snapshots(),
+      builder: (context, snapshot) {
+        if (snapshot.hasError) {
+          return const Text('something went wrong');
+        } else if (snapshot.connectionState == ConnectionState.waiting) {
+          return const CircularProgressIndicator();
+        } else {
+          var d = snapshot.data!.docs
+              .where((element) => element['Name'] == 'Aloe vera')
+              .toList();
+
+          return d.isEmpty
+              ? const Text('')
+              : Center(
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text('Name: ${d[0]['Name']}'),
+                      const SizedBox(
+                        height: 20,
+                      ),
+                      Text('Edible ${d[0]['Edible']}'),
+                      const SizedBox(
+                        height: 20,
+                      ),
+                      Text('FruitFul ${d[0]['FruitFul']}'),
+                      const SizedBox(
+                        height: 20,
+                      ),
+                      Text('Thorynplant ${d[0]['Thorynplant']}'),
+                    ],
+                  ),
+                );
+        }
+      },
+    ));
   }
 }

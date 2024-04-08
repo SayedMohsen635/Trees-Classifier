@@ -44,37 +44,38 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyBMCx9L1mKIBGgkA2HYqRjAtNqwwDX6Jvw',
-    appId: '1:186587038018:web:49e00e59f66664de3048db',
-    messagingSenderId: '186587038018',
-    projectId: 'trees-app-841af',
-    authDomain: 'trees-app-841af.firebaseapp.com',
-    storageBucket: 'trees-app-841af.appspot.com',
+    apiKey: 'AIzaSyAsMB5_4riqWPBQ_eeMqJcx6fTUIY_FBwM',
+    appId: '1:166751578555:web:fdd60f66cc96ed279dbc9e',
+    messagingSenderId: '166751578555',
+    projectId: 'trees-bf876',
+    authDomain: 'trees-bf876.firebaseapp.com',
+    storageBucket: 'trees-bf876.appspot.com',
+    measurementId: 'G-R3S81S95TG',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyADGmyQiNL73raUj4ImgTVdTaBDgH09szU',
-    appId: '1:186587038018:android:20966dd1786872273048db',
-    messagingSenderId: '186587038018',
-    projectId: 'trees-app-841af',
-    storageBucket: 'trees-app-841af.appspot.com',
+    apiKey: 'AIzaSyCOkHYVuQm63wABUq0F0cR_oP0p_caJ3Gw',
+    appId: '1:166751578555:android:cc96b9ec1de3c5ae9dbc9e',
+    messagingSenderId: '166751578555',
+    projectId: 'trees-bf876',
+    storageBucket: 'trees-bf876.appspot.com',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyB9Kbkbt0Cw9Gk-s6qi2JcugBamHkwqAok',
-    appId: '1:186587038018:ios:891a2d049bbc83933048db',
-    messagingSenderId: '186587038018',
-    projectId: 'trees-app-841af',
-    storageBucket: 'trees-app-841af.appspot.com',
+    apiKey: 'AIzaSyAXWAMC1kRba9Ttm1YIBKh9srN5ltWybv8',
+    appId: '1:166751578555:ios:920b52eeb4c0be0a9dbc9e',
+    messagingSenderId: '166751578555',
+    projectId: 'trees-bf876',
+    storageBucket: 'trees-bf876.appspot.com',
     iosBundleId: 'com.example.treesProject',
   );
 
   static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'AIzaSyB9Kbkbt0Cw9Gk-s6qi2JcugBamHkwqAok',
-    appId: '1:186587038018:ios:35d7b5f76ae9b19e3048db',
-    messagingSenderId: '186587038018',
-    projectId: 'trees-app-841af',
-    storageBucket: 'trees-app-841af.appspot.com',
+    apiKey: 'AIzaSyAXWAMC1kRba9Ttm1YIBKh9srN5ltWybv8',
+    appId: '1:166751578555:ios:0420209a53998e229dbc9e',
+    messagingSenderId: '166751578555',
+    projectId: 'trees-bf876',
+    storageBucket: 'trees-bf876.appspot.com',
     iosBundleId: 'com.example.treesProject.RunnerTests',
   );
 }

@@ -9,11 +9,11 @@ import 'package:trees_project/search_screen.dart';
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   // await Firebase.initializeApp(
-  //   options: FirebaseOptions(apiKey: "AIzaSyBMCx9L1mKIBGgkA2HYqRjAtNqwwDX6Jvw"
-  //   , appId: "1:186587038018:web:49e00e59f66664de3048db"
-  //   , messagingSenderId: "186587038018",
-  //    projectId: "trees-app-841af")
-  // );
+  //     options: const FirebaseOptions(
+  //         apiKey: "AIzaSyBMCx9L1mKIBGgkA2HYqRjAtNqwwDX6Jvw",
+  //         appId: "1:186587038018:web:49e00e59f66664de3048db",
+  //         messagingSenderId: "186587038018",
+  //         projectId: "trees-app-841af"));
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
   runApp(const TreeIdentificationApp());
 }
