@@ -1,0 +1,7 @@
+0 Aloe vera
+1 Apple Bitter
+2 Olive trees
+3 Samar trees
+4 Sidr trees
+5 Zero result
+6 Not a tree

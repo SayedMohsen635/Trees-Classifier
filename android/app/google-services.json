@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "186587038018",
+    "project_id": "trees-app-841af",
+    "storage_bucket": "trees-app-841af.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:186587038018:android:20966dd1786872273048db",
+        "android_client_info": {
+          "package_name": "com.example.trees_project"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyADGmyQiNL73raUj4ImgTVdTaBDgH09szU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
