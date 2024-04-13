@@ -1,5 +1,3 @@
-// ignore_for_file: avoid_print
-
 import 'package:flutter/material.dart';
 import 'package:flutter_pdfview/flutter_pdfview.dart';
 
@@ -18,7 +16,7 @@ class _InfoPageState extends State<InfoPage> {
   Widget build(BuildContext context) {
     return Center(
       child: PDFView(
-        filePath: 'assets/information.pdf',
+        filePath: '../assets/information.pdf',
         enableSwipe: true,
         swipeHorizontal: true,
         autoSpacing: false,

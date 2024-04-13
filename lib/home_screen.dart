@@ -6,15 +6,27 @@ import 'package:tflite_v2/tflite_v2.dart';
 
 import 'cach_helper.dart';
 
+File? _image;
+
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
+
+  get image => null;
 
   @override
   State<HomePage> createState() => _HomePageState();
 }
 
+class myImageProvider extends ChangeNotifier {
+  File? get image => _image;
+
+  void setImage(File image) {
+    _image = image;
+    notifyListeners();
+  }
+}
+
 class _HomePageState extends State<HomePage> {
-  File? _image;
   List? _outputs;
   bool _isModelLoaded = false;
 

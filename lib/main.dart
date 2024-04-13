@@ -1,11 +1,12 @@
 import 'dart:async';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:trees_project/cach_helper.dart';
-import 'package:trees_project/firebase_options.dart';
-import 'package:trees_project/home_screen.dart';
-import 'package:trees_project/info_screen.dart';
-import 'package:trees_project/search_screen.dart';
+import 'package:provider/provider.dart';
+import 'cach_helper.dart';
+import 'firebase_options.dart';
+import 'home_screen.dart';
+import 'info_screen.dart';
+import 'search_screen.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -13,8 +14,12 @@ Future<void> main() async {
     options: DefaultFirebaseOptions.currentPlatform,
   );
   CachHelper.init();
-  runApp(const TreeIdentificationApp());
-
+  runApp(
+    ChangeNotifierProvider(
+      create: (_) => myImageProvider(),
+      child: const TreeIdentificationApp(),
+    )
+  );
 }
 
 class TreeIdentificationApp extends StatefulWidget {
@@ -48,9 +53,6 @@ class _TreeIdentificationAppState extends State<TreeIdentificationApp> {
                   : const InfoPage(),
           bottomNavigationBar: BottomNavigationBar(
             onTap: (val) {
-              // if (val == 0) {
-              //   _searchTree();
-              // }
               setState(() {
                 selectedIndex = val;
               });

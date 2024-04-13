@@ -1,7 +1,11 @@
 // ignore_for_file: avoid_print
 
+import 'dart:io';
+
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'home_screen.dart';
 
 import 'cach_helper.dart';
 
@@ -14,6 +18,7 @@ class SearchInFirebasePage extends StatefulWidget {
 
 class _SearchInFirebasePageState extends State<SearchInFirebasePage> {
   String label = '';
+
   @override
   void initState() {
     label = CachHelper.getData(key: 'output');
@@ -22,6 +27,7 @@ class _SearchInFirebasePageState extends State<SearchInFirebasePage> {
 
   @override
   Widget build(BuildContext context) {
+    var imageProvider = Provider.of<myImageProvider>(context);
     return Center(
         child: StreamBuilder(
       stream: FirebaseFirestore.instance.collection('trees').snapshots(),
@@ -42,6 +48,10 @@ class _SearchInFirebasePageState extends State<SearchInFirebasePage> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
+                      CircleAvatar(
+                        radius: 100,
+                        backgroundImage: imageProvider.image != null ? FileImage(imageProvider.image!) : null,
+                      ),
                       Text('Name: ${d[0]['Name']}', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30, color: Colors.green)),
                       const SizedBox(
                         height: 20,
