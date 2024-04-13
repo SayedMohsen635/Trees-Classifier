@@ -13,10 +13,10 @@ class SearchInFirebasePage extends StatefulWidget {
 }
 
 class _SearchInFirebasePageState extends State<SearchInFirebasePage> {
-  String lable = '';
+  String label = '';
   @override
   void initState() {
-    lable = CachHelper.getData(key: 'output');
+    label = CachHelper.getData(key: 'output');
     super.initState();
   }
 
@@ -32,7 +32,7 @@ class _SearchInFirebasePageState extends State<SearchInFirebasePage> {
           return const CircularProgressIndicator();
         } else {
           var d = snapshot.data!.docs
-              .where((element) => element['Name'] == lable)
+              .where((element) => element['Name'] == label)
               .toList();
 
           return d.isEmpty
@@ -42,19 +42,19 @@ class _SearchInFirebasePageState extends State<SearchInFirebasePage> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text('Name: ${d[0]['Name']}'),
+                      Text('Name: ${d[0]['Name']}', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30, color: Colors.green)),
                       const SizedBox(
                         height: 20,
                       ),
-                      Text('Edible ${d[0]['Edible']}'),
+                      Text('Edible: ${d[0]['Edible']}', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30, color: Colors.green)),
                       const SizedBox(
                         height: 20,
                       ),
-                      Text('FruitFul ${d[0]['FruitFul']}'),
+                      Text('FruitFul: ${d[0]['FruitFul']}', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30, color: Colors.green)),
                       const SizedBox(
                         height: 20,
                       ),
-                      Text('Thorynplant ${d[0]['Thorynplant']}'),
+                      Text('Thorynplant: ${d[0]['Thorynplant']}', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30, color: Colors.green)),
                     ],
                   ),
                 );
