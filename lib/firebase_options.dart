@@ -44,29 +44,29 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyAsMB5_4riqWPBQ_eeMqJcx6fTUIY_FBwM',
-    appId: '1:166751578555:web:fdd60f66cc96ed279dbc9e',
-    messagingSenderId: '166751578555',
-    projectId: 'trees-bf876',
-    authDomain: 'trees-bf876.firebaseapp.com',
-    storageBucket: 'trees-bf876.appspot.com',
-    measurementId: 'G-R3S81S95TG',
+    apiKey: 'AIzaSyAyPamFlchV4WYHPoJgFUTZIceZZTNnTzQ',
+    appId: '1:243428541553:web:76cb61a105723fe521c7d0',
+    messagingSenderId: '243428541553',
+    projectId: 'treesapp-c18cb',
+    authDomain: 'treesapp-c18cb.firebaseapp.com',
+    storageBucket: 'treesapp-c18cb.appspot.com',
+    measurementId: 'G-QF057510FR',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyCOkHYVuQm63wABUq0F0cR_oP0p_caJ3Gw',
-    appId: '1:166751578555:android:cc96b9ec1de3c5ae9dbc9e',
-    messagingSenderId: '166751578555',
-    projectId: 'trees-bf876',
-    storageBucket: 'trees-bf876.appspot.com',
+    apiKey: 'AIzaSyCyhV-M124Zn9yxAUCCeC1sBFVlKApVAbk',
+    appId: '1:243428541553:android:0bf73a37fb56399d21c7d0',
+    messagingSenderId: '243428541553',
+    projectId: 'treesapp-c18cb',
+    storageBucket: 'treesapp-c18cb.appspot.com',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyAXWAMC1kRba9Ttm1YIBKh9srN5ltWybv8',
-    appId: '1:166751578555:ios:920b52eeb4c0be0a9dbc9e',
-    messagingSenderId: '166751578555',
-    projectId: 'trees-bf876',
-    storageBucket: 'trees-bf876.appspot.com',
+    apiKey: 'AIzaSyDfFF2LrPP8VvXvSw44MKaPR9DaGBkm6j0',
+    appId: '1:243428541553:ios:472dd81fab51a3a521c7d0',
+    messagingSenderId: '243428541553',
+    projectId: 'treesapp-c18cb',
+    storageBucket: 'treesapp-c18cb.appspot.com',
     iosBundleId: 'com.example.treesProject',
   );
 

@@ -36,7 +36,7 @@ class _SearchInFirebasePageState extends State<SearchInFirebasePage> {
               .toList();
 
           return d.isEmpty
-              ? const Text('')
+              ? const Text('Not a tree, different plant', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30, color: Colors.green))
               : Center(
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -50,11 +50,11 @@ class _SearchInFirebasePageState extends State<SearchInFirebasePage> {
                       const SizedBox(
                         height: 20,
                       ),
-                      Text('FruitFul: ${d[0]['FruitFul']}', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30, color: Colors.green)),
+                      Text('Fruitful: ${d[0]['Fruitful']}', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30, color: Colors.green)),
                       const SizedBox(
                         height: 20,
                       ),
-                      Text('Thorynplant: ${d[0]['Thorynplant']}', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30, color: Colors.green)),
+                      Text('Thornyplant: ${d[0]['Thornyplant']}', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30, color: Colors.green)),
                     ],
                   ),
                 );

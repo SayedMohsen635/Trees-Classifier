@@ -9,8 +9,10 @@ import 'package:trees_project/search_screen.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
-    CachHelper.init();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
+  CachHelper.init();
   runApp(const TreeIdentificationApp());
 
 }
