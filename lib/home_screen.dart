@@ -88,12 +88,13 @@ class _HomePageState extends State<HomePage> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
           CircleAvatar(
-            radius: 100,
+            radius: 150,
             backgroundImage: _image != null ? FileImage(_image!) : null,
             child: _image == null
-                ? const Icon(
-                    Icons.camera_alt,
-                    size: 50,
+                ? Image(
+                    image: AssetImage('assets/Icon.jpg'),
+                    width: 500,
+                    height: 500,
                   )
                 : null,
           ),
